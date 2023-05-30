@@ -5,8 +5,8 @@ FHub is a function repository based on a **function specification**. This allows
 ---
 
 ## Benefits
-* **Increased productivity** helping developers save time by providing a central location to find functions.
-* **Improved quality** of software by providing a way to test functions, track functions changes, keep version compatibility with old versions.
+* **Increase productivity** helping developers save time by providing a central location to find functions.
+* **Improve quality** of software by providing a way to test functions, track functions changes, keep version compatibility with old versions.
 * **Reduced costs** of software development by providing a way to reuse functions avoiding duplicating work.
 
 
