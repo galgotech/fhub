@@ -18,9 +18,9 @@
 name: string
 specVersion: "0.1"
 version: string
-env: {
-  [string]: string
-}
+constants: [string]: string
+env: [...string]
+import: [...string]
 packages: {
   [string]: {
     import: string
@@ -28,9 +28,8 @@ packages: {
     build: {
       container: {
         image?: string
-        context?: string
-        dockerfile?: string | *"Dockerfile"
-        target: string
+        containerFile?: string
+        source?: string | *"/app"
       }
     }
     serving: {

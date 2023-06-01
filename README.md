@@ -18,9 +18,12 @@ Simple schema using CUE. [Complete schema](./schema.cue)
 name: "identity"
 specVersion: "0.1"
 version: "1.0"
-env: {
-  "mode": "production"
-}
+env: [
+  "MODE"
+]
+import: [
+  "./fhub/fhub.file1.cue"
+]
 packages: {
   identity: {
     import: "fhub.dev/identity"
