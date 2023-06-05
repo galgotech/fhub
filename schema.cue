@@ -26,6 +26,9 @@ packages: {
     import: string
     launch?: string
     build: {
+      local: {
+        source?: string | *"./"
+      }
       container: {
         image?: string
         containerFile?: string
