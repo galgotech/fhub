@@ -18,40 +18,29 @@
 name: string
 specVersion: "0.1"
 version: string
-constants: [string]: string
-env: [...string]
-import: [...string]
-packages: {
-  [string]: {
-    import: string
-    launch?: string
-    build: {
-      local: {
-        source?: string | *"./"
-      }
-      container: {
-        image?: string
-        containerFile?: string
-        source?: string | *"/app"
-      }
-    }
-    serving: {
-      http?: {
-        url: string
-      }
-      grpc?: {}
-    }
+build: {
+  local?: {
+    source: string | *"./"
   }
+  container?: {
+    image?: string
+    containerFile?: string
+    source: string | *"/app"
+  }
+}
+serving: {
+  http?: {
+    url: string
+  }
+  grpc?: {}
 }
 functions: {
   [string]: {
-    package: string
-    launch: string
     inputs: {
-      [string]: number | string | bool
+      [string]: number | string | bool | null
     }
     outputs: {
-      [string]: number | string | bool
+      [string]: number | string | bool | null
     }
   }
 }

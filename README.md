@@ -18,32 +18,19 @@ Simple schema using CUE. [Complete schema](./schema.cue)
 name: "identity"
 specVersion: "0.1"
 version: "1.0"
-env: [
-  "MODE"
-]
-import: [
-  "./fhub/fhub.file1.cue"
-]
-packages: {
-  identity: {
-    import: "fhub.dev/identity"
-    launch: "Init"
-    build: {
-      container: {
-        image: "golang:1.20"
-      }
-    }
-    serving: {
-      http: {
-        url: "https://identity:3000/"
-      }
-    }
+
+build: {
+  container: {
+    image: "golang:1.20"
+  }
+}
+serving: {
+  http: {
+    url: "https://identity:3000/"
   }
 }
 functions: {
   login: {
-    package: "identity"
-    launch: "Login"
     input: {
       username: string
       password: string
